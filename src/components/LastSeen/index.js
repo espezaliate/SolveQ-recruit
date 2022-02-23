@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { TimeForm } from "./Form";
 import { LastSeenOutput } from "./LastSeenOutput";
+import { LastSeenOutputV2 } from "./LastSeenOutputV2";
 
 export const LastSeen = () => {
   const [date, setDate] = useState(new Date());
@@ -14,6 +15,7 @@ export const LastSeen = () => {
         <TimeForm date={date} setDate={setDate} setStartCount={setStartCount} />
       </div>
       {startCount && <LastSeenOutput count={count} />}
+      {startCount && <LastSeenOutputV2 count={count} />}
     </>
   );
 };
