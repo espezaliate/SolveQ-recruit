@@ -4,14 +4,15 @@ import styled from "styled-components";
 const InputContainer = styled.span`
   display: flex;
   flex-direction: column;
-  width: 10%;
   align-items: center;
+  flex-grow: 1;
+  justify-content: flex-end;
 `;
 
 const FormContainer = styled.form`
   display: flex;
-  gap: 25px;
   justify-content: center;
+  gap: 15px;
 `;
 
 export const TimeForm = ({ date, setDate, setStartCount }) => {
@@ -53,7 +54,9 @@ export const TimeForm = ({ date, setDate, setStartCount }) => {
         <label htmlFor="seconds">Seconds</label>
         <input name="seconds" defaultValue={date.getSeconds()} />
       </InputContainer>
-      <button type="submit">Submit</button>
+      <InputContainer>
+        <button type="submit">Submit</button>
+      </InputContainer>
     </FormContainer>
   );
 };

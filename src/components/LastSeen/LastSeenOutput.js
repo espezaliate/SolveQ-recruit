@@ -10,6 +10,7 @@ export const LastSeenOutput = ({ count }) => {
 
   return (
     <div>
+      <h1 style={{ textAlign: "center" }}>V1</h1>
       <div>
         Time elapsed:{" "}
         {timeElapsed < 60

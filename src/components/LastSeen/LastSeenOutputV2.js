@@ -2,8 +2,10 @@ import React, { useEffect, useState } from "react";
 
 export const LastSeenOutputV2 = ({ count }) => {
   const [currentTime, setCurrentTime] = useState(Math.floor(new Date() / 1000));
-  const timeTracker = () => setCurrentTime(Math.floor(new Date() / 1000));
   let timeElapsed = currentTime - count;
+
+  const timeTracker = () => setCurrentTime(Math.floor(new Date() / 1000));
+
   useEffect(() => {
     if (timeElapsed < 60) {
       setInterval(() => timeTracker(), 1000);
@@ -16,6 +18,7 @@ export const LastSeenOutputV2 = ({ count }) => {
 
   return (
     <div>
+      <h1 style={{ textAlign: "center" }}>V2</h1>
       <div>
         Time elapsed:{" "}
         {timeElapsed < 60
