@@ -1,9 +1,8 @@
-import logo from "./logo.svg";
 import "./App.css";
-import { LastSeenInput } from "./components/LastSeen";
+import { LastSeen } from "./components/LastSeen";
 
 function App() {
-  return <LastSeenInput />;
+  return <LastSeen />;
 }
 
 export default App;
