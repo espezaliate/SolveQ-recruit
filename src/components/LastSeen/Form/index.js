@@ -25,7 +25,11 @@ export const TimeForm = ({ date, setDate, setStartCount }) => {
     const hour = formData.get("hour");
     const minutes = formData.get("minutes");
     const seconds = formData.get("seconds");
-    setDate(new Date(year, month, day, hour, minutes, seconds));
+    try {
+      setDate(new Date(year, month, day, hour, minutes, seconds));
+    } catch {
+      throw new Error("Invalid Date");
+    }
     setStartCount(true);
   };
   return (

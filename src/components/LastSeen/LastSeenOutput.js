@@ -12,10 +12,12 @@ export const LastSeenOutput = ({ count }) => {
     <div>
       <h1 style={{ textAlign: "center" }}>V1</h1>
       <div>
-        Time elapsed:{" "}
-        {timeElapsed < 60
-          ? timeElapsed + " seconds ago"
-          : Math.floor(timeElapsed / 60) + " minutes ago"}
+        {timeElapsed > 0 ? "Time elapsed: " : "Invalid Date"}
+        {timeElapsed > 0
+          ? timeElapsed < 60
+            ? timeElapsed + " seconds ago"
+            : Math.floor(timeElapsed / 60) + " minutes ago"
+          : null}
       </div>
     </div>
   );
